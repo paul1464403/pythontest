@@ -9,13 +9,9 @@ trigger:
 pool: default
 
 steps:
-- task: PythonScript@0
-  inputs:
-    scriptSource: 'filePath'
-    scriptPath: '$(System.DefaultWorkingDirectory)'
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: '3.x'
+    versionSpec: '3.9.6'
     disableDownloadFromRegistry: true
     addToPath: true
     architecture: 'x64'
