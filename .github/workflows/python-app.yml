@@ -15,7 +15,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: default
+    runs-on: MacBook-Pro
 
     steps:
     - name: Install dependencies
