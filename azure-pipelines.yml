@@ -9,18 +9,7 @@ trigger:
 pool: default
 
 steps:
-- task: UsePythonVersion@0
-  inputs:
-    versionSpec: '3.x'
-    disableDownloadFromRegistry: true
-    addToPath: true
-    architecture: 'x64'
-  
-- script: |
-    python3 -m pip3 install --upgrade pip
-  displayName: 'Install dependencies'
 
 - script: |
-    pip3 install pytest pytest-azurepipelines
-    pytest
-  displayName: 'pytest'
+    python3 pythontest.py
+  displayName: 'Install dependencies'
